@@ -49,7 +49,6 @@ const Address: React.FC<AddressProps> = ({ src, lat, lng }) => {
                         latitude: position.coords.latitude,
                         longitude: position.coords.longitude,
                     });
-                    console.log(position)
                 },
                 (error) => {
                     console.error('Error getting location', error);
@@ -87,8 +86,6 @@ const Address: React.FC<AddressProps> = ({ src, lat, lng }) => {
     }
 
     useEffect(() => {
-        console.log(lat)
-        console.log(lng)
         if(lat && lng){
             setLocation({
                 latitude: lat,
@@ -133,7 +130,6 @@ const Address: React.FC<AddressProps> = ({ src, lat, lng }) => {
 
     }
     const handleSelect = (place: any) => {
-        console.log(place)
         setLocation({
             latitude: parseFloat(place.lat),
             longitude: parseFloat(place.lon),
@@ -145,7 +141,6 @@ const Address: React.FC<AddressProps> = ({ src, lat, lng }) => {
     };
 
     const handleDropDownSelect = (place: any) => {
-        console.log(place)
         setLocation({
             latitude: parseFloat(place.lat),
             longitude: parseFloat(place.lon),
@@ -204,19 +199,6 @@ const Address: React.FC<AddressProps> = ({ src, lat, lng }) => {
                     lng: location.longitude,
                 }} />}
 
-                {/* Markers for each restaurant */}
-                {/* {!restaurantsloading && !resaurantserror && restaurants.length > 0 &&
-                    restaurants.map((restaurant: any) => (
-                        <Marker
-                            key={restaurant._id}
-                            position={{ lat: restaurant.location.coordinates[1], lng: restaurant.location.coordinates[0] }} // Assuming coordinates are in [lng, lat] order
-                            icon={{
-                                url: location_map_icon,
-                                scaledSize: new google.maps.Size(30, 30),
-                            }}
-                            title={restaurant.name}
-                        />
-                    ))} */}
             </GoogleMap>
 
             {src !== "home" &&

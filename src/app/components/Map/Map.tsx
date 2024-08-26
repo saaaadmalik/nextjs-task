@@ -5,7 +5,6 @@ import location_icon from "../../assets/icons/location.svg"
 import clear_icon from "../../assets/icons/clear.svg"
 import arrow_down_icon from "../../assets/icons/arrow_down.svg"
 import Image from 'next/image'
-import useGeolocation from 'react-hook-geolocation';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

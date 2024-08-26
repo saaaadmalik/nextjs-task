@@ -15,13 +15,11 @@ export const useRestaurants = () => {
         query: restaurantList,
         variables: { latitude, longitude },
       });
-      console.log(data);
       setRestaurants(data.nearByRestaurants.restaurants || []);
     } catch (err: any) {
         console.log('err:' +err);
         setRestaurantsError(err);
     } finally {
-        console.log('hi');
         setRestaurantsLoading(false);
     }
   };
