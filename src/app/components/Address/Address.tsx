@@ -204,7 +204,7 @@ const Address: React.FC<AddressProps> = ({ src, lat, lng }) => {
             {src !== "home" &&
                 (
                     <>
-                        <div className='fixed top-1/4 left-0 sm:left-2 w-full sm:w-[65vw] bg-slate-50 rounded-2xl z-10'>
+                        <div className='fixed top-1/4 left-0 sm:left-2 w-full sm:w-[65vw] bg-slate-50 rounded-2xl z-10 opacity-90'>
                             <div className='w-full rounded-2xl flex items-center'>
                                 <button className=' text-center px-2 py-2 w-1/3 sm:py-4 rounded-l-2xl bg-[#90EA93] font-bold text-xs sm:text-base'>DELIVERING TO</button>
                                 <div className='flex justify-between w-full p-2 sm:p-3 bg-slate-200 rounded-r-2xl '>
